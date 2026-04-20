@@ -1,6 +1,23 @@
 <<<<<<< HEAD
 =======
+ejercicio 1
+SELECT 
+    FirstName + ' ' + LastName AS Nombre
+FROM Employees
 
+UNION
+
+SELECT 
+    ContactName AS Nombre
+FROM Customers;
+
+ejercicio 2
+SELECT DISTINCT
+    e.FirstName + ' ' + e.LastName AS Nombre
+FROM Employees e
+INNER JOIN Customers c
+    ON c.ContactName LIKE '%' + e.FirstName + '%'
+ORDER BY Nombre
 
 --Ejercicio 3
 -- Empleados que no son clientes
