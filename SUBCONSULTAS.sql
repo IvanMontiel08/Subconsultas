@@ -12,12 +12,13 @@ SELECT
 FROM Customers;
 
 ejercicio 2
-SELECT DISTINCT
-    e.FirstName + ' ' + e.LastName AS Nombre
-FROM Employees e
-INNER JOIN Customers c
-    ON c.ContactName LIKE '%' + e.FirstName + '%'
-ORDER BY Nombre
+SELECT FirstName AS Nombre
+FROM Employees
+
+INTERSECT
+
+SELECT ContactName
+FROM Customers;
 
 --Ejercicio 3
 -- Empleados que no son clientes
